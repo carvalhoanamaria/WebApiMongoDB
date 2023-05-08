@@ -22,7 +22,7 @@ namespace WebApiMongoDB.Services
         public async Task<List<Produto>> GetAsync() =>
             await _produtoCollection.Find(x => true).ToListAsync();
 
-        public async Task<Produto> GetAsync(string id) =>
+        public async Task<Produto?> GetAsync(string id) =>
             await _produtoCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
         public async Task  CreateAsync (Produto produto) =>

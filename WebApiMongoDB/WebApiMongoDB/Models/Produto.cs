@@ -10,6 +10,6 @@ namespace WebApiMongoDB.Models
         public string? Id { get; set; }
 
         [BsonElement("Nome")]
-        public string Nome { get; set; } = null;
+        public string Nome { get; set; } = null!;
     }
 }
